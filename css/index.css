@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap");
+/************Variables************/
+/***********Mixins***********/
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +39,7 @@ html {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 70vh;
+  min-height: 80vh;
   width: 48rem;
 }
 .container .header {
@@ -156,6 +158,19 @@ html {
   font-weight: 700;
   letter-spacing: 0.15rem;
 }
+.container .processor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .processor .AI {
+  animation: rotate 2s linear infinite;
+}
+.container .processor img {
+  width: 5rem;
+  transition: all 2s ease-in;
+}
 .container .body {
   width: 100%;
 }
@@ -234,6 +249,7 @@ html {
 }
 .popup-wrapper .popup {
   background-color: #1F3641;
+  opacity: 0.8;
   width: 100%;
   height: 28vh;
   display: flex;
@@ -289,6 +305,14 @@ html {
   background-color: #FFC860;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (max-width: 520px) {
   html {
     font-size: 55%;

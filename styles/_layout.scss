@@ -3,8 +3,9 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 70vh;
+  min-height: 80vh;
   width: 48rem;
+  // padding-bottom: 5rem;
   // border: .2rem solid;
 
   .header{
@@ -116,6 +117,24 @@
     }
   }
 
+  .processor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    //padding: 5rem;
+    // margin-top: 4.5rem;
+
+  .AI{
+    animation: rotate 2s linear infinite;
+  }
+
+    img{
+      width: 5rem;
+      transition: all 2s ease-in;
+    }
+  }
+
   .body{
     width: 100%;
 
@@ -201,6 +220,7 @@
 
   .popup{
     background-color: $lightGunMetal;
+    opacity: 0.8;
     width: 100%;
     height: 28vh;
     display: flex;
@@ -248,6 +268,16 @@
       @include shadow($color: darken($amber, 18));
       @include hover($lightAmber);
     }
+  }
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
   }
 }
 
